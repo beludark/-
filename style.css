@@ -427,7 +427,7 @@ body {
 }
 
 /* Smartphones */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         padding: 20px;
     }
@@ -664,7 +664,7 @@ body {
 }
 
 /* Smartphones */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body {
         padding: 20px;
     }
