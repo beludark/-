@@ -251,63 +251,65 @@ body {
 /* Smartphones */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 0;
     }
-    
+
     .container {
-        padding: 25px 15px;
-        width: 100%;
-        border-radius: 20px;
+        padding: 20px 10px;
+        width: 95%;
+        max-width: 95%;
+        border-radius: 18px;
     }
-    
+
     .title {
-        font-size: 2em;
-        margin-bottom: 12px;
+        font-size: 2.2em;
+        margin-bottom: 10px;
     }
-    
+
     .subtitle {
         font-size: 1em;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
-    
+
     .countdown {
-        gap: 4px;
-        margin: 30px 0;
+        gap: 6px; /* léger espace entre les cases */
+        margin: 25px 0;
+        padding: 0 5px;
         max-width: 100%;
-        padding: 0 2px;
     }
-    
+
     .time-unit {
-        min-width: 70px;
-        max-width: 80px;
-        padding: 15px 8px;
+        min-width: 85px;
+        max-width: 100px;
+        padding: 18px 10px;
         flex: 1;
     }
-    
+
     .time-number {
-        font-size: 1.8em;
+        font-size: 2em;
     }
-    
+
     .time-label {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
-    
+
     .message {
         font-size: 1em;
-        margin-top: 25px;
+        margin-top: 20px;
     }
-    
+
     .special-message {
         padding: 18px;
         margin-top: 20px;
         font-size: 0.9em;
     }
-    
+
     .celebration {
         font-size: 2em;
         padding: 30px 20px;
     }
 }
+
 
 /* Petits smartphones */
 @media (max-width: 480px) {
@@ -347,40 +349,37 @@ body {
 
 
 /* Très petits écrans */
-@media (max-width: 320px) {
+@media (max-width: 480px) {
     .container {
+        width: 95%;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .countdown {
+        gap: 5px;
+        padding: 0 2px;
+    }
+
+    .time-unit {
+        min-width: 80px;
+        max-width: 85px;
         padding: 15px 8px;
     }
-    
-    .title {
-        font-size: 1.4em;
-    }
-    
-    .countdown {
-        gap: 3px;
-        max-width: 100%;
-        padding: 0 1px;
-    }
-    
-    .time-unit {
-        min-width: 50px;
-        max-width: 60px;
-        padding: 10px 4px;
-    }
-    
+
     .time-number {
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
-    
-    .time-label {
-        font-size: 0.55em;
+
+    .title {
+        font-size: 6.5vw;
     }
-    
-    .special-message {
-        padding: 12px;
-        font-size: 0.8em;
+
+    .subtitle {
+        font-size: 4vw;
     }
 }
+
 
 /* Orientation paysage sur mobile */
 @media (max-width: 768px) and (orientation: landscape) {
