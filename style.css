@@ -383,49 +383,63 @@ body {
 
 /* Orientation paysage sur mobile */
 @media (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding: 0;
+    }
+
     .container {
-        padding: 20px;
+        padding: 10px;
         max-height: 90vh;
         overflow-y: auto;
+        width: 95%;
+        max-width: 95%;
+        border-radius: 15px;
     }
-    
+
     .title {
-        font-size: 1.8em;
+        font-size: 1.6em;
         margin-bottom: 8px;
     }
-    
+
     .subtitle {
-        font-size: 1em;
-        margin-bottom: 20px;
+        font-size: 0.9em;
+        margin-bottom: 12px;
     }
-    
+
     .countdown {
-        margin: 25px 0;
-        gap: 12px;
-        max-width: 350px;
+        margin: 15px 0;
+        gap: 6px;
+        padding: 0 5px;
+        max-width: 100%;
     }
-    
+
     .time-unit {
-        padding: 12px 8px;
-        min-width: 70px;
+        padding: 10px 6px;
+        min-width: 80px;
+        max-width: 90px;
     }
-    
+
     .time-number {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
-    
+
     .time-label {
         font-size: 0.7em;
     }
-    
+
     .message {
-        font-size: 0.9em;
-        margin-top: 20px;
+        font-size: 0.85em;
+        margin-top: 10px;
     }
-    
+
     .special-message {
-        padding: 15px;
-        font-size: 0.8em;
-        margin-top: 20px;
+        padding: 12px;
+        font-size: 0.85em;
+        margin-top: 15px;
+    }
+
+    .celebration {
+        font-size: 1.6em;
+        padding: 20px 15px;
     }
 }
