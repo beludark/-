@@ -43,10 +43,10 @@ body {
 /* Container principal */
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(247, 246, 246, 0.388);
     padding: 50px 40px;
     border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     max-width: 700px;
@@ -106,7 +106,7 @@ body {
     min-width: 120px;
     flex: 1;
     max-width: 140px;
-    box-shadow: 0 10px 25px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 10px 25px rgba(255, 107, 156, 0.071);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -271,10 +271,10 @@ body {
     }
     
     .countdown {
-        gap: 8px;
+        gap: 4px;
         margin: 30px 0;
         max-width: 100%;
-        padding: 0 5px;
+        padding: 0 2px;
     }
     
     .time-unit {
@@ -311,57 +311,40 @@ body {
 
 /* Petits smartphones */
 @media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
     .container {
-        padding: 20px 12px;
         width: 100%;
+        padding: 10px;
+        border-radius: 15px;
     }
-    
-    .title {
-        font-size: 1.6em;
-    }
-    
-    .subtitle {
-        font-size: 0.9em;
-    }
-    
+
     .countdown {
-        gap: 5px;
-        margin: 25px 0;
-        max-width: 100%;
+        gap: 3px;
         padding: 0 2px;
     }
-    
+
     .time-unit {
-        min-width: 60px;
-        max-width: 70px;
-        padding: 12px 6px;
+        min-width: 55px;
+        max-width: 65px;
+        padding: 12px 4px;
     }
-    
+
     .time-number {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
-    
-    .time-label {
-        font-size: 0.6em;
+
+    .title {
+        font-size: 7vw;
     }
-    
-    .message {
-        font-size: 0.9em;
-    }
-    
-    .special-message {
-        padding: 15px;
-        font-size: 0.85em;
-    }
-    
-    .celebration {
-        font-size: 1.8em;
-    }
-    
-    .heart {
-        font-size: 14px;
+
+    .subtitle {
+        font-size: 4vw;
     }
 }
+
 
 /* Très petits écrans */
 @media (max-width: 320px) {
