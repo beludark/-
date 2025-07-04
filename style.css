@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Particules flottantes */
+.floating-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    z-index: 2;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.title {
+    font-size: 3em;
+    color: #ff6b9d;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 50px 0;
+    justify-items: center;
+}
+
+.time-unit {
+    background: linear-gradient(135deg, #ff6b9d, #ff8a80);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    min-width: 120px;
+    box-shadow: 0 10px 25px rgba(255, 107, 157, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.time-unit:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.4);
+}
+
+.time-unit::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.time-number {
+    font-size: 3em;
+    font-weight: 700;
+    display: block;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+}
+
+.time-label {
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 40px;
+    font-weight: 400;
+}
+
+.special-message {
+    background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 35px;
+    box-shadow: 0 10px 25px rgba(253, 203, 110, 0.3);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+.special-message p {
+    margin-bottom: 10px;
+}
+
+.special-message p:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 10px 25px rgba(253, 203, 110, 0.3); }
+    to { box-shadow: 0 15px 35px rgba(253, 203, 110, 0.5); }
+}
+
+.emoji {
+    font-size: 1.5em;
+    margin: 0 5px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Animation de fin */
+.celebration {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6b9d, #ffeaa7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 3em;
+    animation: celebrationPulse 1s ease-in-out infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes celebrationPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Responsive Design */
+
+/* Tablettes */
+@media (max-width: 1024px) {
+    .container {
+        padding: 40px 30px;
+        max-width: 600px;
+    }
+    
+    .title {
+        font-size: 2.5em;
+    }
+    
+    .countdown {
+        gap: 20px;
+    }
+    
+    .time-unit {
+        min-width: 100px;
+        padding: 20px 15px;
+    }
+    
+    .time-number {
+        font-size: 2.5em;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
+    .container {
+        padding: 30px 25px;
+        width: 95%;
+        border-radius: 20px;
+    }
+    
+    .title {
+        font-size: 2.2em;
+        margin-bottom: 12px;
+    }
+    
+    .subtitle {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+    }
+    
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 35px 0;
+    }
+    
+    .time-unit {
+        min-width: 110px;
+        padding: 18px 12px;
+    }
+    
+    .time-number {
+        font-size: 2.2em;
+    }
+    
+    .time-label {
+        font-size: 0.9em;
+    }
+    
+    .message {
+        font-size: 1.1em;
+        margin-top: 30px;
+    }
+    
+    .special-message {
+        padding: 20px;
+        margin-top: 25px;
+        font-size: 0.95em;
+    }
+    
+    .celebration {
+        font-size: 2.5em;
+        padding: 30px 20px;
+    }
+}
+
+/* Petits smartphones */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+        width: 98%;
+    }
+    
+    .title {
+        font-size: 1.8em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 30px 0;
+    }
+    
+    .time-unit {
+        min-width: 90px;
+        padding: 15px 10px;
+    }
+    
+    .time-number {
+        font-size: 1.8em;
+    }
+    
+    .time-label {
+        font-size: 0.8em;
+    }
+    
+    .message {
+        font-size: 1em;
+    }
+    
+    .special-message {
+        padding: 18px;
+        font-size: 0.9em;
+    }
+    
+    .celebration {
+        font-size: 2em;
+    }
+    
+    .heart {
+        font-size: 16px;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 320px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .title {
+        font-size: 1.6em;
+    }
+    
+    .time-unit {
+        min-width: 80px;
+        padding: 12px 8px;
+    }
+    
+    .time-number {
+        font-size: 1.6em;
+    }
+    
+    .special-message {
+        padding: 15px;
+        font-size: 0.85em;
+    }
+}
+
+/* Orientation paysage sur mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .title {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    
+    .countdown {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 25px 0;
+    }
+    
+    .time-unit {
+        padding: 12px 8px;
+        min-width: 70px;
+    }
+    
+    .time-number {
+        font-size: 1.5em;
+    }
+    
+    .time-label {
+        font-size: 0.7em;
+    }
+    
+    .message {
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+    
+    .special-message {
+        padding: 15px;
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
+}
