@@ -85,14 +85,17 @@ body {
 
 /* COUNTDOWN - TOUJOURS 4 COLONNES */
 .countdown {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
     margin: 50px 0;
-    justify-items: center;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: auto;
+    padding: 0 10px;
 }
 
 .time-unit {
@@ -101,10 +104,13 @@ body {
     padding: 25px 20px;
     border-radius: 20px;
     min-width: 120px;
+    flex: 1;
+    max-width: 140px;
     box-shadow: 0 10px 25px rgba(255, 107, 157, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .time-unit:hover {
@@ -245,57 +251,60 @@ body {
 /* Smartphones */
 @media (max-width: 768px) {
     body {
-        padding: 20px;
+        padding: 10px;
     }
     
     .container {
-        padding: 30px 25px;
-        width: 95%;
+        padding: 25px 15px;
+        width: 100%;
         border-radius: 20px;
     }
     
     .title {
-        font-size: 2.2em;
+        font-size: 2em;
         margin-bottom: 12px;
     }
     
     .subtitle {
-        font-size: 1.1em;
-        margin-bottom: 30px;
+        font-size: 1em;
+        margin-bottom: 25px;
     }
     
     .countdown {
-        gap: 15px;
-        margin: 35px 0;
-        max-width: 400px;
+        gap: 8px;
+        margin: 30px 0;
+        max-width: 100%;
+        padding: 0 5px;
     }
     
     .time-unit {
-        min-width: 80px;
-        padding: 18px 12px;
+        min-width: 70px;
+        max-width: 80px;
+        padding: 15px 8px;
+        flex: 1;
     }
     
     .time-number {
-        font-size: 2.2em;
+        font-size: 1.8em;
     }
     
     .time-label {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
     
     .message {
-        font-size: 1.1em;
-        margin-top: 30px;
+        font-size: 1em;
+        margin-top: 25px;
     }
     
     .special-message {
-        padding: 20px;
-        margin-top: 25px;
-        font-size: 0.95em;
+        padding: 18px;
+        margin-top: 20px;
+        font-size: 0.9em;
     }
     
     .celebration {
-        font-size: 2.5em;
+        font-size: 2em;
         padding: 30px 20px;
     }
 }
@@ -303,86 +312,90 @@ body {
 /* Petits smartphones */
 @media (max-width: 480px) {
     .container {
-        padding: 25px 20px;
-        width: 98%;
+        padding: 20px 12px;
+        width: 100%;
     }
     
     .title {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     
     .subtitle {
-        font-size: 1em;
-    }
-    
-    .countdown {
-        gap: 10px;
-        margin: 30px 0;
-        max-width: 320px;
-    }
-    
-    .time-unit {
-        min-width: 70px;
-        padding: 15px 8px;
-    }
-    
-    .time-number {
-        font-size: 1.8em;
-    }
-    
-    .time-label {
-        font-size: 0.8em;
-    }
-    
-    .message {
-        font-size: 1em;
-    }
-    
-    .special-message {
-        padding: 18px;
         font-size: 0.9em;
     }
     
+    .countdown {
+        gap: 5px;
+        margin: 25px 0;
+        max-width: 100%;
+        padding: 0 2px;
+    }
+    
+    .time-unit {
+        min-width: 60px;
+        max-width: 70px;
+        padding: 12px 6px;
+    }
+    
+    .time-number {
+        font-size: 1.5em;
+    }
+    
+    .time-label {
+        font-size: 0.6em;
+    }
+    
+    .message {
+        font-size: 0.9em;
+    }
+    
+    .special-message {
+        padding: 15px;
+        font-size: 0.85em;
+    }
+    
     .celebration {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     
     .heart {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
 /* Très petits écrans */
 @media (max-width: 320px) {
     .container {
-        padding: 20px 15px;
+        padding: 15px 8px;
     }
     
     .title {
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
     
     .countdown {
-        gap: 8px;
-        max-width: 280px;
+        gap: 3px;
+        max-width: 100%;
+        padding: 0 1px;
     }
     
     .time-unit {
-        min-width: 60px;
-        padding: 12px 6px;
+        min-width: 50px;
+        max-width: 60px;
+        padding: 10px 4px;
     }
     
     .time-number {
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
     
     .time-label {
-        font-size: 0.7em;
+        font-size: 0.55em;
     }
     
     .special-message {
-        padding: 15px;
-        font-size: 0.85em;
+        padding: 12px;
+        font-size: 0.8em;
     }
 }
 
