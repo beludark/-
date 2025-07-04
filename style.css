@@ -664,7 +664,7 @@ body {
 }
 
 /* Smartphones */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         padding: 20px;
     }
