@@ -90,7 +90,7 @@ function updateTimeElement(elementId, newValue) {
     
     if (currentValue !== formattedValue) {
         element.style.transform = 'scale(1.1)';
-        element.style.color = '#ffeb3b';
+        element.style.color = '#ff9a9e';
         
         setTimeout(() => {
             element.textContent = formattedValue;
