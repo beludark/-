@@ -1,5 +1,5 @@
 // Configuration de la date cible - 1er mars 2026 à minuit
-const targetDate = new Date('2026-03-01 00:00:00').getTime();
+const targetDate = new Date('2026-02-18 00:00:00').getTime();
 
 // Fonction pour créer les cœurs flottants
 function createFloatingHeart() {
@@ -179,3 +179,4 @@ function testCelebration() {
 // Rendre certaines fonctions disponibles globalement pour le debugging
 window.getTimeRemaining = getTimeRemaining;
 window.testCelebration = testCelebration;
+
